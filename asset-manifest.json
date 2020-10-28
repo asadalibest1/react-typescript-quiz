@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-typescript-quiz/static/css/main.abd9d9aa.chunk.css",
+    "main.js": "/react-typescript-quiz/static/js/main.cef3dfd3.chunk.js",
+    "main.js.map": "/react-typescript-quiz/static/js/main.cef3dfd3.chunk.js.map",
+    "runtime-main.js": "/react-typescript-quiz/static/js/runtime-main.796423e7.js",
+    "runtime-main.js.map": "/react-typescript-quiz/static/js/runtime-main.796423e7.js.map",
+    "static/js/2.0312dee5.chunk.js": "/react-typescript-quiz/static/js/2.0312dee5.chunk.js",
+    "static/js/2.0312dee5.chunk.js.map": "/react-typescript-quiz/static/js/2.0312dee5.chunk.js.map",
+    "index.html": "/react-typescript-quiz/index.html",
+    "precache-manifest.6b8bd3f297a8944860051643982a4dcc.js": "/react-typescript-quiz/precache-manifest.6b8bd3f297a8944860051643982a4dcc.js",
+    "service-worker.js": "/react-typescript-quiz/service-worker.js",
+    "static/css/main.abd9d9aa.chunk.css.map": "/react-typescript-quiz/static/css/main.abd9d9aa.chunk.css.map",
+    "static/js/2.0312dee5.chunk.js.LICENSE.txt": "/react-typescript-quiz/static/js/2.0312dee5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.796423e7.js",
+    "static/js/2.0312dee5.chunk.js",
+    "static/css/main.abd9d9aa.chunk.css",
+    "static/js/main.cef3dfd3.chunk.js"
+  ]
+}
