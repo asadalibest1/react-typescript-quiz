@@ -1,0 +1,31 @@
+.main-level-div{
+    font-family: 'Fredoka One', cursive;
+    color: #fca311;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-level-div .paper{
+    background: white;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    /* border: 2px solid black; */
+    width: 32%;
+    height: 500px;
+    /* height: 100vh; */
+    /* display: grid;
+    place-content: center; */
+    opacity: 0;
+}
+.main-level-div .paper h2{
+    margin-top: 60px;
+}
+
+.main-level-div .paper .level{
+    /* border: 1px solid black; */
+    height: 270px;
+    display: grid;
+    place-content: center; 
+}

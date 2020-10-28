@@ -1,0 +1,42 @@
+/* .main-level-div{
+    font-family: 'Fredoka One', cursive;
+    color: #fca311;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+
+.start-quiz-div{
+padding-top: 40px;
+opacity: 0;
+}
+.start-quiz-div .data{
+    color: red
+}
+
+.start-quiz-div h1{
+font-size: 36px;
+}
+.start-quiz-div .para{
+    margin: 30px ;
+    /* padding-left: 300px; */
+
+}
+
+.start-quiz-div .input1{
+    /* margin-left: 10px; */
+    margin-bottom: 50px;
+    font-size: 17px;
+    /* border: 1px solid black; */
+    display: inline-block;
+}
+.start-quiz-div input{
+width: 50px;
+font-size: 32px;
+
+}
+/* .start-quiz-div .buttons{
+    border: 2px solid black;
+} */

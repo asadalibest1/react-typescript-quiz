@@ -1,0 +1,19 @@
+.start-result-div{
+    padding-top: 100px;
+    }
+    /* .start-result-div .data{
+        color: red
+    } */
+    
+    .start-result-div h1{
+    margin: 30px ;    
+    font-size: 36px;
+    }
+    /* .start-result-div .para{
+        margin: 30px ;    
+    } */
+    .start-result-div span{
+        color: rgb(226, 7, 7);
+        font-family: 'Fredoka One', cursive;
+        
+    }

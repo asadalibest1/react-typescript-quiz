@@ -1,0 +1,11 @@
+.main-wallpaper{
+    background-image: url("https://kaboompics.com/cache/c/a/7/d/e/ca7dec2ab9e604a102ae232ed01940f16e00c722.jpeg"); /* The image used */
+    background-color: skyblue; /* Used if the image is unavailable */
+    height: 100vh;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    text-align: center;
+}
+/* level */
+/* .main-level-div { display: none;} */
