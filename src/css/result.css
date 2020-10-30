@@ -1,5 +1,6 @@
 .start-result-div{
     padding-top: 100px;
+    opacity: 0;
     }
     /* .start-result-div .data{
         color: red
@@ -17,3 +18,9 @@
         font-family: 'Fredoka One', cursive;
         
     }
+
+@media only screen and (max-width: 800px) {
+    .start-result-div{
+        padding-top: 40px;
+        }
+}

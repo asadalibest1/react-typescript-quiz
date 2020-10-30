@@ -7,11 +7,20 @@ import StartQuiz from './components/startQuiz'
 import Quiz from './components/quiz'
 import Result from './components/result';
 import {State} from './components/store/store'
+import {getApiData} from "./components/Api/api"
 
 export default function App1() {
+    const {data, setData} = React.useContext(State);
+    const {category, difficulty, amount, getData, pageNum} = data;
 
-    const {data} = React.useContext(State);
-    const {pageNum} = data;        
+    // React.useEffect(()=>{
+    //     const fetchData = async ()=>{
+    //         const Data: any= await getApiData(amount, category, difficulty);
+    //         setData(Data);
+    //     }
+    //     fetchData();
+    // },[])
+
     return (
 <div className="main-wallpaper">
     
@@ -21,7 +30,7 @@ export default function App1() {
     {(pageNum === 3) ? <StartQuiz /> : false}
     {(pageNum === 4) ? <Quiz /> : false}
     {(pageNum === 5) ? <Result /> : false}
-{console.log(pageNum)}
+{/* // {console.log(pageNum)} */}
         </div>
     )
 }

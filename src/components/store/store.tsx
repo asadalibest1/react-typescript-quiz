@@ -1,12 +1,13 @@
 import React, {createContext} from 'react'
 
 const Data = {
+    getData: [],
     category: 0,
     categoryName: "",
     difficulty: "",
     amount: 10,
     pageNum: 1,
-    fetchCondition: false,
+    totalNum: 0,
 };
 
 export const State: any = createContext(Data);
@@ -14,6 +15,15 @@ export const State: any = createContext(Data);
 const reducer = (state: any, action: any) =>{
     switch(action.type){
         
+        case "GET_DATA": {
+
+            return {
+                    ...state,
+                    getData: action.payload,
+                    } 
+        
+        
+            }
         case "ADD_CAT": {
 
             return {
@@ -55,17 +65,15 @@ const reducer = (state: any, action: any) =>{
             return {
                     ...state,
                     pageNum: action.payload,
-                    // img: action.payload2,
-                    // title: action.payload3
                     } 
         
         
             }
-            case "CHANGE_FETCHCONDITION": {
+            case "ADD_TOTALNUM": {
 
                 return {
                         ...state,
-                        fetchCondition: action.payload,
+                        totalNum: action.payload,
                         } 
             
             
@@ -79,12 +87,19 @@ export const TransProvider: any = ({children}: any) =>{
     let [data, dispatch] = React.useReducer(reducer, Data);
     
 
+const setData = (arr: string[]) =>{
+        dispatch({
+            type: "GET_DATA",
+            payload: arr,
+            // payload2: img,
+            // payload3: title,
+        })
+    
+    }
 const AddCategory = (num: number) =>{
     dispatch({
         type: "ADD_CAT",
         payload: num,
-        // payload2: img,
-        // payload3: title,
     })
 
 }
@@ -116,21 +131,22 @@ const changePage = (num: number) =>{
     })
 
 }
-const setFetchCondition = (boolean: boolean) =>{
+const AddTotalNum = (num: number) =>{
     dispatch({
-        type: "CHANGE_FETCHCONDITION",
-        payload: boolean,
+        type: "ADD_TOTALNUM",
+        payload: num,
     })
 
 }
 const values ={
     data,
+    setData,
     AddCategory,
     AddCategoryName,
     AddDifficulty,
     AddAmount,
     changePage,
-    setFetchCondition,
+    AddTotalNum,
 }
 
     return(

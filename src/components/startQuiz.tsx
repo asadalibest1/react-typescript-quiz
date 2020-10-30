@@ -1,6 +1,6 @@
 import React from 'react'
 import "../css/startQuiz.css"
-import "../css/animatedButtons2.css"
+import "../css/animatedButtons.css"
 import {State} from "./store/store"
 
 
@@ -59,20 +59,16 @@ export default function StartQuiz() {
 			</button>		
             </div> */}
         
-            <div className="container1 section__box001" onClick={()=>{selectOption()}}>
+            <div className="container1 section__box001" onClick={(e)=>{e.preventDefault(); selectOption()}}>
             <a href="#" className="btn">Start Quiz</a>
             </div>
         
-            <div className="section__box section__box001">
+            <div className="section__box section__box001" onClick={()=>{changePage(1)}}>
 			<button className="r-button ai-element ai-element_type3 ai-element8">
 				<span className="ai-element__label ai-element__label001">Go Back</span>
 			</button>		
             </div>
         </div>
-            
-        {/* <div className="container"> */}
-        
-        {/* </div> */}
 
         </div>
     )

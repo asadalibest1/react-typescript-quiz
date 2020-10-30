@@ -1,6 +1,6 @@
 import React from 'react'
 import "../css/level.css"
-import "../css/animatedButtons2.css"
+import "../css/animatedButtons.css"
 import {State} from "./store/store"
 
 export default function Level() {
@@ -52,17 +52,17 @@ const selectOption =(diff: string)=>{
             <div className="level">
                 <div className="section__box" onClick={()=>{selectOption("easy")}}>
                     <button className="r-button ai-element ai-element_type1 ai-element4">
-                        <span className="ai-element__label">Easy</span>
+                        <span className="ai-element__label level-button">Easy</span>
                     </button>
                 </div>
                 <div className="section__box" onClick={()=>{selectOption("medium")}}>
                     <button className="r-button ai-element ai-element_type1 ai-element4">
-                        <span className="ai-element__label">Medium</span>
+                        <span className="ai-element__label level-button">Medium</span>
                     </button>
                 </div>
                 <div className="section__box" onClick={()=>{selectOption("hard")}}>
                     <button className="r-button ai-element ai-element_type1 ai-element4">
-                        <span className="ai-element__label">Hard</span>
+                        <span className="ai-element__label level-button">Hard</span>
                     </button>
                 </div>
         </div>

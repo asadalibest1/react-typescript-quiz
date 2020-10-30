@@ -29,3 +29,11 @@
     display: grid;
     place-content: center; 
 }
+@media only screen and (max-width: 800px) {
+    .main-level-div .paper{
+        height: 500px;
+        width: 94%;
+        margin-bottom: 20px;
+        opacity: 0;
+    }
+}

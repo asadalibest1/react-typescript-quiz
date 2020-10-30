@@ -1,17 +1,21 @@
 import React from 'react'
 import "../css/quiz.css"
+import "../css/loader.css"
 import "../css/quizButtons.scss"
 import {getApiData} from "./Api/api"
 import {filterDataType} from "./types/quiz_types"
 import {State} from "./store/store"
+import {listSelectCtrl} from "./helper"
+// import CSS from 'csstype';
 
 
 export default function Quiz() {
     const [getData, setData] = React.useState<filterDataType[]>([]);
     const [QuestionNo, setQuestionNo] = React.useState(0);
+    const [id, setId] = React.useState<any>(null);
 
-    const {data} = React.useContext(State);
-    const {category, difficulty, amount, fetchCondition} = data;
+    const {data, AddTotalNum, changePage} = React.useContext(State);
+    const {category, difficulty, amount, totalNum} = data;
 
     React.useEffect(()=>{
         function animate(){
@@ -36,39 +40,66 @@ export default function Quiz() {
          },[])
 
 const changeQuiz = ()=>{
-    (QuestionNo !== (getData.length -1)) ?
+
+    listSelectCtrl();
+    setId(null);
+    selectOption();
+    if(QuestionNo !== (getData.length -1)){
         setQuestionNo(QuestionNo + 1)
-        :
-        alert("Quiz Finished");
+    }else{
+        paperAnimate();
+        setTimeout(()=>{
+            changePage(5)
+        }, 200)
     }
-const selectOption =(id: any)=>{
-    const _id: any = document.getElementById(id);
-    alert(_id.innerText);
-    // alert(id);
+        }
+const selectOption =()=>{
+    if(id !== null){
+            const _id: any = document.getElementById(id.toString());
+            if (_id.innerText === getData[QuestionNo].answer){
+                AddTotalNum(totalNum + 1)        
+    }
+    }
 }
+const paperAnimate =()=>{
+    const paper: any = document.querySelector(".paper");
+    const Animate = paper.animate([
+        {opacity: "0"},
+    ],{
+        duration: 200,
+        iterations: 1,
+    })}
+
 let optionNum = 0;
+const selectRed =(id: any)=>{
+        
+    listSelectCtrl();
+    const getClass: any = document.getElementsByClassName("answer-button")[id];
+    getClass.style.background = "red";
+        
+    setId(id);
+    }
     return (
         <div className="main-quiz-div">
             <div className="paper">
-            {/* {console.log(data)} */}
                 {
                 (!getData.length) ?
-                    <h1>Loading....</h1>
+                    
+                    <div className="loader-div">><div className="loader"></div></div>
                 :
                         <>
-                            <h2>Question # {QuestionNo + 1}/{amount}</h2>
-
+                        <h2>Question # {QuestionNo + 1}/{amount}</h2>
                         <p>Q:{QuestionNo + 1} {getData[QuestionNo].question}</p>
                         {getData[QuestionNo].options.map((item: string, ind: number)=>{
                             return(
-                                <div className="answer-button" key={ind}>
-                                {optionNum = optionNum + 1}) <div
-                                 id={ind.toString()} onClick={()=>{selectOption(ind)}}>{item}</div>
+                                <div className="answer-button" key={ind} id="ansBtn">
+                                {optionNum = optionNum + 1}) <div id={ind.toString()}
+                                onClick={()=>{selectRed(ind)}}>{item}</div>
                                 
                                 </div>
                                 )
                         })}
-                        <button className="learn-more" onClick={changeQuiz} >Next Question</button>
+                        <button className="learn-more" onClick={changeQuiz}>Next Question</button>
                         </>    
                 }            
             </div>
