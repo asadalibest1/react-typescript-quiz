@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/react-typescript-quiz/static/css/main.e05ea914.chunk.css",
-    "main.js": "/react-typescript-quiz/static/js/main.29c2cdfe.chunk.js",
-    "main.js.map": "/react-typescript-quiz/static/js/main.29c2cdfe.chunk.js.map",
+    "main.css": "/react-typescript-quiz/static/css/main.f122b978.chunk.css",
+    "main.js": "/react-typescript-quiz/static/js/main.b62eeef1.chunk.js",
+    "main.js.map": "/react-typescript-quiz/static/js/main.b62eeef1.chunk.js.map",
     "runtime-main.js": "/react-typescript-quiz/static/js/runtime-main.796423e7.js",
     "runtime-main.js.map": "/react-typescript-quiz/static/js/runtime-main.796423e7.js.map",
     "static/js/2.2eef2865.chunk.js": "/react-typescript-quiz/static/js/2.2eef2865.chunk.js",
     "static/js/2.2eef2865.chunk.js.map": "/react-typescript-quiz/static/js/2.2eef2865.chunk.js.map",
     "index.html": "/react-typescript-quiz/index.html",
-    "precache-manifest.43bf0d9ab3e7c02b28250bec6a78fde8.js": "/react-typescript-quiz/precache-manifest.43bf0d9ab3e7c02b28250bec6a78fde8.js",
+    "precache-manifest.8e5fbe59276b64389d26e83239a48cb5.js": "/react-typescript-quiz/precache-manifest.8e5fbe59276b64389d26e83239a48cb5.js",
     "service-worker.js": "/react-typescript-quiz/service-worker.js",
-    "static/css/main.e05ea914.chunk.css.map": "/react-typescript-quiz/static/css/main.e05ea914.chunk.css.map",
+    "static/css/main.f122b978.chunk.css.map": "/react-typescript-quiz/static/css/main.f122b978.chunk.css.map",
     "static/js/2.2eef2865.chunk.js.LICENSE.txt": "/react-typescript-quiz/static/js/2.2eef2865.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.796423e7.js",
     "static/js/2.2eef2865.chunk.js",
-    "static/css/main.e05ea914.chunk.css",
-    "static/js/main.29c2cdfe.chunk.js"
+    "static/css/main.f122b978.chunk.css",
+    "static/js/main.b62eeef1.chunk.js"
   ]
 }
