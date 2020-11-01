@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { FormEvent } from 'react'
 import "../css/startQuiz.css"
 import "../css/animatedButtons.css"
 import {State} from "./store/store"
 
+//  Type
+type __FormEvent = React.FormEvent<EventTarget>;
+type __ChangeEvent = React.ChangeEvent<HTMLInputElement>;
 
 export default function StartQuiz() {
-    const {data, AddAmount, changePage, setFetchCondition} = React.useContext(State);
+    const {data, AddAmount, changePage} = React.useContext(State);
     const {categoryName, difficulty, amount} = data;
 
     React.useEffect(()=>{
@@ -50,7 +53,7 @@ export default function StartQuiz() {
             <div className="input1 para">Pleaze enter the Number of your qustions<br  />you want in your quiz.
             </div>
             <div className="input1">
-            <input type="number" value={amount} onChange={(e)=>{AddAmount(e.target.value)}} className="quiz-number"/> 
+            <input type="number" value={amount} onChange={(e: __ChangeEvent)=>{AddAmount(e.target.value)}} className="quiz-number"/> 
             </div>
         <div className="buttons">
         {/* <div className="section__box section__box001">
@@ -59,8 +62,8 @@ export default function StartQuiz() {
 			</button>		
             </div> */}
         
-            <div className="container1 section__box001" onClick={(e)=>{e.preventDefault(); selectOption()}}>
-            <a href="#" className="btn">Start Quiz</a>
+            <div className="container1 section__box001" onClick={(e: __FormEvent)=>{e.preventDefault(); selectOption()}}>
+            <span className="btn">Start Quiz</span>
             </div>
         
             <div className="section__box section__box001" onClick={()=>{changePage(1)}}>

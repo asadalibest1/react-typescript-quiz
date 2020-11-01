@@ -1,11 +1,18 @@
-.main-wallpaper{
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     background-image: url("https://kaboompics.com/cache/c/a/7/d/e/ca7dec2ab9e604a102ae232ed01940f16e00c722.jpeg"); /* The image used */
     background-color: skyblue; /* Used if the image is unavailable */
-    height: 100vh;
-    background-position: center; /* Center the image */
+    background-position: 100%; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
     text-align: center;
+    width: 100%;
+    height: 100vh;
 }
-/* level */
-/* .main-level-div { display: none;} */
+/* .main-wallpaper{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+} */

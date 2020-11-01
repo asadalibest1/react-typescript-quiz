@@ -1,6 +1,4 @@
 .main-quiz-div{
-    /* font-family: 'Fredoka One', cursive; */
-    /* color: #fca311; */
     height: 90vh;
     display: flex;
     align-items: center;
@@ -50,18 +48,12 @@
     color: white;
 }
 .main-quiz-div .paper .answer-button div{
-    /* border: 1px solid black; */
     display: inline-block;
     width: 90%;
 }
 @media only screen and (max-width: 800px) {
-/* .main-quiz-div .paper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}  */
 .main-quiz-div .paper{
-    width: 86%;
+    width: 80%;
     height: fit-content;
     padding: 30px 20px;
     margin-bottom: 17px;

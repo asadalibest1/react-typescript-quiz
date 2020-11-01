@@ -1,4 +1,3 @@
-
 /*
 =====
 DEMO DEPENDENCIES
@@ -318,20 +317,15 @@ DEMO DEPENDENCIES
   
   .section__box:nth-child(n+2){
     outline: none;
-    /* border: 1px solid yellow; */
-    /* outline-color: white; */
     margin-top: 25px;
   }
   .section__box001{
       display: inline-block;
       margin: 0px 20px;
 }
-  
   .ai-element__label{
       font-weight: 600;
       width: 200px;
-      /* border: 1px solid black; */
-      /* margin: 3px 0px; */
       padding-bottom: 2.5px;
       
   }
@@ -349,7 +343,7 @@ DEMO DEPENDENCIES
   
   .ai-element:hover .ai-element__label{
       color: red;
-  }
+    }
   
   /*
   =====
@@ -377,8 +371,13 @@ DEMO DEPENDENCIES
 
 
   
-  a {
+  span {
     color: #f4f4f4;
+    cursor: pointer;
+    }
+    a{
+    color: #f4f4f4;
+    cursor: pointer;
     }
   
   .btn {
@@ -393,11 +392,11 @@ DEMO DEPENDENCIES
     background: red;
     font-size: 24px;
     padding: 10px 13px;
-    /* height: 55px; */
     margin: 0px;
     position: relative;
     top: 19px;
 }
+
   
   .btn:hover {
     /* box-shadow: 1px 1px 25px 5px red; */
@@ -426,6 +425,8 @@ DEMO DEPENDENCIES
   .btn:hover:before {
     left: 100%;
   }
+
+
   @media only screen and (max-width: 800px) {
     .btn {
         text-decoration: none;
@@ -438,11 +439,7 @@ DEMO DEPENDENCIES
         background: red;
         font-size: 24px;
         padding: 10px 13px;
-        /* height: 55px; */
-        /* margin-top: 0px; */
-        /* position: relative; */
-        /* top: 19px; */
-    }
+     }
     .ai-element__label{
         width: 285px;
     }

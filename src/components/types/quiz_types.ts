@@ -12,3 +12,11 @@ export type filterDataType ={
         answer: string,
         options: string[],
 }
+
+export type ACTION_TYPE =
+|{type: "ADD_CAT", payload: number}
+|{type: "ADD_CAT_NAME", payload: string}
+|{type: "ADD_DIFF", payload: string}
+|{type: "ADD_AMOUNT", payload: number}
+|{type: "CHANGE_PAGE", payload: number}
+|{type: "ADD_TOTALNUM", payload: number}

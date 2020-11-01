@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { FormEvent } from 'react'
 import "../css/result.css"
 import "../css/animatedButtons.css"
 import {State} from "./store/store"
+
+//  Type
+type __FormEvent = React.FormEvent<EventTarget>;
 
 export default function Result() {
 
@@ -42,14 +45,8 @@ export default function Result() {
             </h1>
             
             <div className="container1 section__box001">
-            <a href="#" className="btn" onClick={(e)=>{e.preventDefault(); AddTotalNum(0); changePage(1)}}>Try more Quizes</a>
+            <a href="javascript:void(0)" className="btn btn-8" onClick={(e: __FormEvent)=>{e.preventDefault(); AddTotalNum(0); changePage(1)}}>Try more Quizes</a>
             </div>
-        
-            {/* <div className="section__box section__box001">
-			<button className="r-button ai-element ai-element_type3 ai-element8">
-				<span className="ai-element__label ai-element__label001">Go Back</span>
-			</button>		
-            </div> */}
         </div>
     )
 }

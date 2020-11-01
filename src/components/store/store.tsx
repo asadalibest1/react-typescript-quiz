@@ -1,7 +1,7 @@
 import React, {createContext} from 'react'
+import {ACTION_TYPE} from "../types/quiz_types";
 
-const Data = {
-    getData: [],
+const Data: any= {
     category: 0,
     categoryName: "",
     difficulty: "",
@@ -10,20 +10,12 @@ const Data = {
     totalNum: 0,
 };
 
-export const State: any = createContext(Data);
+export const State = createContext(Data);
 
-const reducer = (state: any, action: any) =>{
+const reducer = (state: typeof Data, action: ACTION_TYPE) =>{
     switch(action.type){
         
-        case "GET_DATA": {
-
-            return {
-                    ...state,
-                    getData: action.payload,
-                    } 
-        
-        
-            }
+       
         case "ADD_CAT": {
 
             return {
@@ -87,15 +79,6 @@ export const TransProvider: any = ({children}: any) =>{
     let [data, dispatch] = React.useReducer(reducer, Data);
     
 
-const setData = (arr: string[]) =>{
-        dispatch({
-            type: "GET_DATA",
-            payload: arr,
-            // payload2: img,
-            // payload3: title,
-        })
-    
-    }
 const AddCategory = (num: number) =>{
     dispatch({
         type: "ADD_CAT",
@@ -140,7 +123,6 @@ const AddTotalNum = (num: number) =>{
 }
 const values ={
     data,
-    setData,
     AddCategory,
     AddCategoryName,
     AddDifficulty,

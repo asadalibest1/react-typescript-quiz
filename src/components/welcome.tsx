@@ -1,8 +1,6 @@
 import React from 'react'
 import "../css/welcome.css"
 import {State} from "./store/store"
-// import {CSSTransition} from "react-transition-group"
-// import useWebAnimations from "@wellyshen/use-web-animations";
 
 export default function Welcome() {
 

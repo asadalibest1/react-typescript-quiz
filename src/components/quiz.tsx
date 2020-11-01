@@ -3,16 +3,15 @@ import "../css/quiz.css"
 import "../css/loader.css"
 import "../css/quizButtons.scss"
 import {getApiData} from "./Api/api"
-import {filterDataType} from "./types/quiz_types"
+import {filterDataType, dataType} from "./types/quiz_types"
 import {State} from "./store/store"
-import {listSelectCtrl} from "./helper"
-// import CSS from 'csstype';
+import {colorList} from "./helper"
 
 
 export default function Quiz() {
     const [getData, setData] = React.useState<filterDataType[]>([]);
     const [QuestionNo, setQuestionNo] = React.useState(0);
-    const [id, setId] = React.useState<any>(null);
+    const [id, setId] = React.useState <number|null> (null);
 
     const {data, AddTotalNum, changePage} = React.useContext(State);
     const {category, difficulty, amount, totalNum} = data;
@@ -32,8 +31,8 @@ export default function Quiz() {
      }
         animate();
     
-        const fetchData = async ()=>{
-            var Data: any= await getApiData(amount, category, difficulty);
+        const fetchData = async ()=> {
+            var Data: any = await getApiData(amount, category, difficulty);
             setData(Data);
         }
         fetchData();
@@ -41,7 +40,7 @@ export default function Quiz() {
 
 const changeQuiz = ()=>{
 
-    listSelectCtrl();
+    colorList();
     setId(null);
     selectOption();
     if(QuestionNo !== (getData.length -1)){
@@ -73,7 +72,7 @@ const paperAnimate =()=>{
 let optionNum = 0;
 const selectRed =(id: any)=>{
         
-    listSelectCtrl();
+    colorList();
     const getClass: any = document.getElementsByClassName("answer-button")[id];
     getClass.style.background = "red";
         
@@ -85,16 +84,23 @@ const selectRed =(id: any)=>{
                 {
                 (!getData.length) ?
                     
-                    <div className="loader-div">><div className="loader"></div></div>
+                    <div className="loader-div"><div className="loader"></div></div>
                 :
                         <>
                         <h2>Question # {QuestionNo + 1}/{amount}</h2>
                         <p>Q:{QuestionNo + 1} {getData[QuestionNo].question}</p>
                         {getData[QuestionNo].options.map((item: string, ind: number)=>{
                             return(
-                                <div className="answer-button" key={ind} id="ansBtn">
-                                {optionNum = optionNum + 1}) <div id={ind.toString()}
-                                onClick={()=>{selectRed(ind)}}>{item}</div>
+                                <div
+                                className="answer-button"
+                                key={ind}
+                                id="ansBtn">
+                                {optionNum = optionNum + 1}) <div
+
+                                id={ind.toString()}
+                                onClick={()=>{selectRed(ind)}}>
+                                {item}
+                                </div>
                                 
                                 </div>
                                 )
